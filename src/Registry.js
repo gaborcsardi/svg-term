@@ -52,6 +52,7 @@ function LineSymbol(props) {
           key={index}
           theme={props.theme}
           underline={word.attr.underline}
+          italic={word.attr.italic}
           x={word.x}
           y={props.theme.fontSize}
           >

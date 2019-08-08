@@ -13,6 +13,7 @@ function Word(props) {
         fg={props.fg}
         height={props.theme.fontSize * props.theme.lineHeight}
         inverse={props.inverse}
+        italic={props.italic}
         width={props.children.length > 0 ? props.children.length : 0}
         x={props.x * props.theme.fontSize * 0.6}
         y={props.y - props.theme.fontSize}
@@ -24,6 +25,7 @@ function Word(props) {
       inverse={props.inverse}
       theme={props.theme}
       underline={props.underline}
+      italic={props.italic}
       x={props.x * props.theme.fontSize * 0.6}
       y={props.y}
       >
@@ -36,6 +38,7 @@ const BG_FILL = props => props.inverse ? fg(props, props.theme) : bg(props, prop
 const TEXT_FILL = props => props.inverse ? bg(props, props.theme) : fg(props, props.theme);
 const DECORATION = props => props.underline ? 'underline' : null;
 const FONT_WEIGHT = props => props.bold ? 'bold' : null;
+const FONT_STYLE = props => props.italic ? 'italic' : null;
 
 const StyledWordBackground = styled.rect`
   fill: ${BG_FILL};
@@ -45,6 +48,7 @@ const StyledWord = styled.text`
   fill: ${TEXT_FILL};
   text-decoration: ${DECORATION};
   font-weight: ${FONT_WEIGHT};
+  font-style: ${FONT_STYLE};
   white-space: pre;
 `;
 

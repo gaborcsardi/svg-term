@@ -163,6 +163,7 @@ export function render(raw: string, options: SvgTermOptions = {}): string {
                               inverse={word.attr.inverse}
                               theme={theme}
                               underline={word.attr.underline}
+                              italic={word.attr.italic}
                               x={word.x}
                               y={line.y + theme.fontSize}
                               >
